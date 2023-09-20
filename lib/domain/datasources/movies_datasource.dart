@@ -2,7 +2,7 @@ import 'package:cinemapedia/domain/entities/movie.dart';
 
 abstract class MoviesDatasource {
   Future<List<Movie>> getNowPaying({int page = 1});
-  
+
   Future<List<Movie>> getPopular({int page = 1});
 
   Future<List<Movie>> getTopRated({int page = 1});
@@ -11,5 +11,5 @@ abstract class MoviesDatasource {
 
   Future<Movie> getMovieById(String id);
 
-
+  Future<List<Movie>> searchMovies(String query);
 }
